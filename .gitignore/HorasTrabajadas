@@ -1,0 +1,57 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int horaI,minI,segI,horaF,minF,segF,hora,min,seg;
+	cout<<"!!AVISO EL FORMATO ES DE 24 HRS!!"<<endl;
+	
+	cout<<"Hora Inicial:";
+	cin>>horaI;
+	
+	cout<<"Minutos Iniciales:";
+	cin>>minI;
+	
+	cout<<"Segundos Iniciales:";
+	cin>>segI;
+	
+	cout<<"Hora Final:";
+	cin>>horaF;
+	
+	cout<<"Minutos Finales:";
+	cin>>minF;
+	
+	cout<<"Segundos Finales:";
+	cin>>segF;
+	
+	if(horaI<=23 && minI<=59)
+	{
+		if(segI<=59 && horaF<=23)
+		{
+			if(minF<=59 && segF<=59)
+			{
+				hora=horaF-horaI;
+				min=minF-minI;
+				seg=segF-segI;
+				
+				if(seg<0)
+				{
+					min=min-1;
+					seg=seg+60;	
+				}
+				if(hora<0)
+				{
+					hora=hora+24;
+				}
+				if(min<0)
+				{
+					min=min+60;
+					hora=hora-1;
+				}
+				cout<<"Trabajaste: "<<hora<<":"<<min<<":"<<seg<<endl;				
+			}
+		}		
+	}
+	else
+	cout<<"Has Introducido horas fuera del formato"<<endl;	
+	return 0;			
+}
