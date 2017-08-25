@@ -1,0 +1,77 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int opcion;
+	cout<<"Introduce ((1)) Para Calcular Si Un Numero Es Primo: "<<endl;
+	cout<<"Introduce ((2)) Para Calcular El Factorial De Un Numero: "<<endl;
+	cout<<"Introduce ((3)) Para Calcular El Promedio: "<<endl;
+	cout<<"Introduce ((0)) Para Salir: "<<endl;
+	cin>>opcion;
+	if(opcion==1)
+	{
+		int n1;
+		int a=0;
+		int i;
+		cout<<"Introduce un numero: "<<endl;
+		cin>>n1;
+		for(i=1; i<=n1; i++)
+		{
+			if(n1%i==0)
+			a++;
+		}
+		if(a==2)
+		{
+			cout<<"ES PRIMO";
+		}
+		else
+		{
+			cout<<"NO ES PRIMO";
+		}
+	}
+	if(opcion==2)
+	{
+		int i;
+		int n1,fac;
+		cout<<"Introduce un numero: "<<endl;
+		cin>>n1;
+		if(n1<0)
+		{
+			fac=0;
+			cout<<"EL FACTORIAL ES"<<"	"<<fac;
+		}
+		else if(n1==0)
+		{
+			fac=1;
+			cout<<"EL FACTORIAL ES"<<"	"<<fac;
+		}
+		else
+		cout<<n1<<"!"<<"=";
+		{
+			for(i=1; i<=n1; i++)
+			cout<<i<<" "<<"x"<<" ";
+		}
+	}
+	if(opcion==3)
+	{
+		cout<<"Si Deseea Salir Presione -1"<<endl;
+		cout<<"No Introduzca Un Valor>10 O Menor<0"<<endl;
+		cout<<endl;
+		float n1,cont=0,sum=0,prom;
+		do
+		{
+			cout<<"Ingrese Calificacion:"<<endl;
+			cin>>n1;
+			sum+=n1;
+			cont++;
+		}
+		while(n1!=-1);
+		cont+=-1;
+		sum+=1;
+		prom=sum/cont;
+		cout<<prom;
+	}
+	if(opcion==0)
+	cout<<"BYE BYE"<<endl;
+	return 0;
+}
