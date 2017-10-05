@@ -1,0 +1,31 @@
+#include<stdlib.h>
+#include<ctime>
+#include<iostream>
+using namespace std;
+int main()
+{
+	int v[1000];
+	for(int i=1; i<1000; i++)
+	{
+		v[i]=1;
+	}
+	for(int i=2; i<1000; i++)
+	{
+
+		if(v[i]==1)
+		{
+			for (int j=i+1;j<1000;j++)
+				if (j%i==0)
+				v[j]=0;
+		}
+
+   	}
+    for(int i=1; i<1000; i++)
+    {
+  	 	if(v[i]==1)
+  	 	{
+   			cout<<i<<endl;
+		}
+    }
+    return 0;
+}
